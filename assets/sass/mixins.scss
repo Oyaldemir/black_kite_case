@@ -1,0 +1,97 @@
+@import './variables.scss';
+
+@mixin status_style($type) {
+    border-radius: 8px;
+    display: flex;
+    padding: 4px 6px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+
+    &::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background-size: cover;
+        margin-top: -3px;
+    }
+
+    @if $type ==1 {
+        background: $purple_purple_100;
+
+        &::before {
+            background-image: url("/assets/img/info.png");
+        }
+
+        p {
+            color: $purple_purple;
+        }
+    }
+
+    @else if $type ==2 {
+        background: $warning_warning_100;
+
+        &::before {
+            background-image: url("/assets/img/setings.png");
+        }
+
+        p {
+            color: $warning_warning;
+        }
+    }
+
+    @else if $type ==3 {
+        background: $info_info_100;
+
+        &::before {
+            background-image: url("/assets/img/playlist-check.png");
+        }
+
+        p {
+            color: $info_info;
+        }
+    }
+
+    @else if $type ==4 {
+        background: $danger_danger_100;
+
+        &::before {
+            background-image: url("/assets/img/close.png");
+        }
+
+        p {
+            color: $danger_danger;
+        }
+    }
+
+    @else if $type ==5 {
+        background: $brand_brand_100;
+
+        &::before {
+            background-image: url("/assets/img/check.png");
+        }
+
+        p {
+            color: $brand_brand;
+        }
+    }
+
+    @else if $type ==6 {
+        background: $primary_gray_100;
+
+        &::before {
+            background-image: url("/assets/img/archive-lock.png");
+        }
+
+        p {
+            color: $primary_gray_600;
+        }
+    }
+}
+
+@mixin default_text() {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}

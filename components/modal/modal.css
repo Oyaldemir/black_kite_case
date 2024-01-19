@@ -1,0 +1,333 @@
+#modalFramework .modal-content {
+  padding: 24px;
+}
+@media (max-width: 992px) {
+  #modalFramework .modal-content {
+    padding: 16px 12px;
+  }
+}
+#modalFramework .modal-header {
+  border: none;
+  padding: 0;
+}
+#modalFramework .modal-header div h5 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+}
+#modalFramework .modal-header div h5 span {
+  background: #CED4DA;
+  color: #FFFFFF;
+  border-radius: 8px;
+  padding: 3px 6px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+#modalFramework .modal-header div p {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-weight: 400;
+}
+#modalFramework .modal-body {
+  border: none;
+  padding: 0;
+}
+#modalFramework .modal-body .stepper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 0 50px;
+}
+#modalFramework .modal-body .stepper > span {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border: 1px solid #CED4DA;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: 600;
+  margin-top: 1px;
+  padding: 2px;
+  position: relative;
+}
+#modalFramework .modal-body .stepper > span.line {
+  position: relative;
+  flex: 0.97;
+  width: 100%;
+  height: 2px;
+  padding: 0;
+  margin-left: -5px;
+  border-radius: 0;
+  background-color: #CED4DA;
+}
+#modalFramework .modal-body .stepper > span.active, #modalFramework .modal-body .stepper > span.default {
+  border: 1px solid #3DCC77;
+}
+#modalFramework .modal-body .stepper > span.active span, #modalFramework .modal-body .stepper > span.default span {
+  width: 100%;
+  border-radius: 50%;
+  color: #FFFFFF;
+  background-color: #3DCC77;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#modalFramework .modal-body .stepper > span > span {
+  width: 17px;
+  display: inline-block;
+  text-align: center;
+}
+#modalFramework .modal-body .stepper > span p {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  position: absolute;
+  font-weight: 400;
+  margin: 0;
+  text-wrap: nowrap;
+  bottom: -25px;
+  left: 0;
+}
+#modalFramework .modal-body .stepper > span p.right {
+  left: -60px;
+}
+#modalFramework .modal-body .step_1 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#modalFramework .modal-body .step_1 .info_bar {
+  padding: 16px;
+  background: #CFF4FC;
+  border: 0.8px solid #0DCAF0;
+  border-radius: 8px;
+}
+#modalFramework .modal-body .step_1 .info_bar p {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
+  color: #0DCAF0;
+  font-family: Poppins;
+  font-weight: 400;
+}
+#modalFramework .modal-body .step_1 .form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#modalFramework .modal-body .step_1 .form > div:not(.file_upload, .file_upload_second) {
+  width: 100%;
+  flex-direction: row;
+  gap: 10px;
+}
+#modalFramework .modal-body .step_1 .form > div:not(.file_upload, .file_upload_second).child {
+  display: flex;
+}
+#modalFramework .modal-body .step_1 .form > div:not(.file_upload, .file_upload_second) > div {
+  width: 100%;
+  border-radius: 8px;
+  padding: 16px;
+  background: #F8F9FA;
+}
+#modalFramework .modal-body .step_1 .form > div:not(.file_upload, .file_upload_second) label {
+  width: 100%;
+  color: #6C757D;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+#modalFramework .modal-body .step_1 .form > div:not(.file_upload, .file_upload_second) input {
+  border-radius: 8px;
+}
+#modalFramework .modal-body .step_1 .form > div:not(.file_upload, .file_upload_second) textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #6C757D;
+}
+#modalFramework .modal-body .step_1 .form > div:not(.file_upload, .file_upload_second) textarea::placeholder {
+  color: #6C757D;
+}
+#modalFramework .modal-body .step_1 .form .file_upload {
+  padding: 16px;
+  background-color: #F8F9FA;
+  border-radius: 8px;
+}
+#modalFramework .modal-body .step_1 .form .file_upload label {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  cursor: pointer;
+  color: #6C757D;
+  margin: 0;
+}
+#modalFramework .modal-body .step_1 .form .file_upload_second {
+  padding: 16px;
+  background-color: #F8F9FA;
+  border-radius: 8px;
+}
+#modalFramework .modal-body .step_1 .form .file_upload_second label {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: #6C757D;
+  margin: 0;
+}
+#modalFramework .modal-body .step_1 .form .file_upload_second .btn_select {
+  cursor: pointer;
+  padding: 6px 24px;
+  background-color: #6C757D;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+#modalFramework .modal-body .step_1 .form .file_upload_second .input_file {
+  width: 100%;
+  background-color: #FFFFFF;
+  border: 1px solid #DEE2E6;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+#modalFramework .modal-body .step_1 .novalid label {
+  color: #DC3545 !important;
+}
+#modalFramework .modal-body .step_1 .novalid input,
+#modalFramework .modal-body .step_1 .novalid textarea {
+  border-color: #DC3545 !important;
+}
+#modalFramework .modal-body .step_1 .novalid input::placeholder,
+#modalFramework .modal-body .step_1 .novalid textarea::placeholder {
+  color: #DC3545 !important;
+}
+#modalFramework .modal-footer {
+  border: none;
+  padding: 0;
+  margin-top: 24px;
+}
+#modalFramework .modal-footer .btn_cancel,
+#modalFramework .modal-footer .btn_prevStep {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: #212529;
+  display: flex;
+  padding: 6px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 8px;
+  background: var(--Primary-Gray-100, #F8F9FA);
+}
+#modalFramework .modal-footer .btn_next,
+#modalFramework .modal-footer .btn_save {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: #FFFFFF;
+  display: flex;
+  padding: 6px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 8px;
+  background: var(--Brand-Brand, #3DCC77);
+}
+#modalFramework .modal-footer .btn_addControl {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: #FFFFFF;
+  border-radius: 8px;
+  border: 1px solid var(--Primary-Gray-600, #6C757D);
+  background: var(--Primary-Gray-600, #6C757D);
+  display: flex;
+  padding: 6px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+#modalFramework .sorting_disabled::after, #modalFramework .sorting_disabled::before {
+  display: none !important;
+}
+@media (max-width: 992px) {
+  #modalFramework #controlListTable_wrapper {
+    overflow: auto;
+  }
+}
+#modalFramework #controlListTable {
+  word-wrap: break-word;
+  margin: 16px 0;
+}
+@media (max-width: 992px) {
+  #modalFramework #controlListTable {
+    overflow: auto;
+  }
+}
+#modalFramework #controlListTable thead th {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: #212529;
+  font-weight: 600;
+}
+#modalFramework #controlListTable tbody tr td {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-weight: 400;
+}
+#modalFramework #controlListTable .action_buttons {
+  display: flex;
+  justify-content: space-around;
+}
+#modalFramework #controlListTable .action_buttons .edit {
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: #6C757D;
+}
+#modalFramework #controlListTable .action_buttons .delete {
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: #DC3545;
+}
+#modalFramework #controlListTable .action_buttons .added {
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: #3DCC77;
+}
+
+/*# sourceMappingURL=modal.css.map */

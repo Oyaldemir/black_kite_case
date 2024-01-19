@@ -1,0 +1,365 @@
+@import '../../assets/sass/variables.scss';
+@import '../../assets/sass/mixins.scss';
+
+#modalFramework {
+
+    .modal-content {
+        padding: 24px;
+
+        @media (max-width: 992px) {
+            padding: 16px 12px;
+        }
+    }
+
+    .modal-header {
+        border: none;
+        padding: 0;
+
+        div {
+
+            h5 {
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                margin: 0;
+
+                span {
+                    background: $primary_gray_400;
+                    color: $universal_white;
+                    border-radius: 8px;
+                    padding: 3px 6px;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                }
+            }
+
+            p {
+                @include default_text();
+                font-weight: 400;
+            }
+        }
+
+        button {}
+    }
+
+    .modal-body {
+        border: none;
+        padding: 0;
+
+        .stepper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 0 0 50px;
+
+            &>span {
+                @include default_text();
+                border: 1px solid $primary_gray_400;
+                width: 36px;
+                height: 36px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                font-weight: 600;
+                margin-top: 1px;
+                padding: 2px;
+                position: relative;
+
+
+                &.line {
+                    position: relative;
+                    flex: .97;
+                    width: 100%;
+                    height: 2px;
+                    padding: 0;
+                    margin-left: -5px;
+                    border-radius: 0;
+                    background-color: $primary_gray_400;
+                }
+
+                &.active,
+                &.default {
+                    border: 1px solid $brand_brand;
+
+                    span {
+                        width: 100%;
+                        border-radius: 50%;
+                        color: $universal_white;
+                        background-color: $brand_brand;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+
+                &>span {
+                    width: 17px;
+                    display: inline-block;
+                    text-align: center;
+                }
+
+                p {
+                    @include default_text();
+                    position: absolute;
+                    font-weight: 400;
+                    margin: 0;
+                    text-wrap: nowrap;
+                    bottom: -25px;
+                    left: 0;
+
+                    &.right {
+                        left: -60px;
+                    }
+                }
+            }
+        }
+
+        .step_1 {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            .info_bar {
+                padding: 16px;
+                background: $info_info_100;
+                border: 0.8px solid $info_info;
+                border-radius: 8px;
+
+                p {
+                    @include default_text();
+                    margin: 0;
+                    color: $info_info;
+                    font-family: Poppins;
+                    font-weight: 400;
+                }
+            }
+
+            .form {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+
+                &>div:not(.file_upload, .file_upload_second) {
+                    width: 100%;
+                    flex-direction: row;
+                    gap: 10px;
+
+                    &.child {
+                        display: flex;
+                    }
+
+                    &>div {
+                        width: 100%;
+                        border-radius: 8px;
+                        padding: 16px;
+                        background: $primary_gray_100;
+                    }
+
+                    label {
+                        width: 100%;
+                        color: $primary_gray_600;
+                        @include default_text();
+                    }
+
+                    input {
+                        border-radius: 8px;
+                    }
+
+                    textarea {
+                        width: 100%;
+                        padding: 10px;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        color: $primary_gray_600;
+
+                        &::placeholder {
+                            color: $primary_gray_600;
+                        }
+                    }
+                }
+
+                .file_upload {
+                    padding: 16px;
+                    background-color: $primary_gray_100;
+                    border-radius: 8px;
+
+                    label {
+                        @include default_text();
+                        cursor: pointer;
+                        color: $primary_gray_600;
+                        margin: 0;
+                    }
+                }
+
+                .file_upload_second {
+                    padding: 16px;
+                    background-color: $primary_gray_100;
+                    border-radius: 8px;
+
+                    label {
+                        @include default_text();
+                        color: $primary_gray_600;
+                        margin: 0;
+                    }
+
+                    .btn_select {
+                        cursor: pointer;
+                        padding: 6px 24px;
+                        background-color: $primary_gray_600;
+                        color: $universal_white;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        border-top-left-radius: 8px;
+                        border-bottom-left-radius: 8px;
+                    }
+
+                    .input_file {
+                        width: 100%;
+                        background-color: $universal_white;
+                        border: 1px solid $primary_gray_300;
+                        border-top-right-radius: 8px;
+                        border-bottom-right-radius: 8px;
+                    }
+                }
+            }
+
+            .novalid {
+                label {
+                    color: $danger_danger !important;
+                }
+
+                input,
+                textarea {
+                    border-color: $danger_danger !important;
+
+                    &::placeholder {
+                        color: $danger_danger !important;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .modal-footer {
+        border: none;
+        padding: 0;
+        margin-top: 24px;
+
+        .btn_cancel,
+        .btn_prevStep {
+            @include default_text();
+            color: $primary_gray_900;
+            display: flex;
+            padding: 6px 12px;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            border-radius: 8px;
+            background: var(--Primary-Gray-100, #F8F9FA);
+        }
+
+        .btn_next,
+        .btn_save {
+            @include default_text();
+            color: $universal_white;
+            display: flex;
+            padding: 6px 12px;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            border-radius: 8px;
+            background: var(--Brand-Brand, #3DCC77);
+        }
+
+        .btn_addControl {
+            @include default_text();
+            color: $universal_white;
+            border-radius: 8px;
+            border: 1px solid var(--Primary-Gray-600, #6C757D);
+            background: var(--Primary-Gray-600, #6C757D);
+            display: flex;
+            padding: 6px 12px;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+        }
+    }
+
+    .sorting_disabled {
+
+        &::after,
+        &::before {
+            display: none !important;
+        }
+    }
+
+    #controlListTable_wrapper {
+        @media (max-width: 992px) {
+            overflow: auto;
+        }
+    }
+
+    #controlListTable {
+        word-wrap: break-word;
+        margin: 16px 0;
+
+        @media (max-width: 992px) {
+            overflow: auto;
+        }
+
+        thead {
+            th {
+                @include default_text();
+                color: $primary_gray_900;
+                font-weight: 600;
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    @include default_text();
+                    // white-space: break-spaces;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        .action_buttons {
+            display: flex;
+            justify-content: space-around;
+
+            .edit {
+                cursor: pointer;
+                padding: 2px 6px;
+                border-radius: 4px;
+                background: $primary_gray_600;
+            }
+
+            .delete {
+                cursor: pointer;
+                padding: 2px 6px;
+                border-radius: 4px;
+                background: $danger_danger;
+            }
+
+            .added {
+                cursor: pointer;
+                padding: 2px 6px;
+                border-radius: 4px;
+                background: $brand_brand;
+            }
+        }
+    }
+}
